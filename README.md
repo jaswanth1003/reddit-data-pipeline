@@ -1,4 +1,4 @@
-# reddit-data-pipeline
+z# reddit-data-pipeline
 ETL pipeline using Airflow to extract Reddit data, store in S3, transform with AWS Glue, and load into Redshift. Built with Docker for containerization. Simulates a production-ready cloud data pipeline for analytics and reporting.
 
 ## **Table of Contents**
@@ -65,13 +65,13 @@ cd reddit-data-pipeline
 
   Edit the config file to include your:
 
-    - Reddit credentials
+ - Reddit credentials
+ 
+ - AWS keys
     
-    - AWS keys
+ - S3 bucket
     
-    - S3 bucket
-    
-    - Redshift cluster details
+ - Redshift cluster details
 
 3. Start the Environment
 
