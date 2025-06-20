@@ -16,15 +16,15 @@ This project implements a modular and scalable ETL pipeline that extracts data f
 
 # Key Functionalities:
 
--Extracts top posts from specified subreddits using Reddit API
+- Extracts top posts from specified subreddits using Reddit API
 
--Schedules and orchestrates tasks via Apache Airflow
+- Schedules and orchestrates tasks via Apache Airflow
 
--Stores raw data in Amazon S3 (data lake)
+- Stores raw data in Amazon S3 (data lake)
 
--Catalogs and transforms data using AWS Glue
+- Catalogs and transforms data using AWS Glue
 
--Loads cleaned data into Amazon Redshift
+- Loads cleaned data into Amazon Redshift
 
 ## *System Architecture*
 
