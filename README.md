@@ -48,66 +48,66 @@ This project implements a modular and scalable ETL pipeline that extracts data f
 
 Before setting up the pipeline, ensure you have:
 
-.An AWS account with access to:
+- An AWS account with access to:
   S3, Glue, Athena, Redshift
-. Reddit API credentials (client ID, secret)
-. Docker and Docker Compose installed
-. Python 3.9+ (for local testing/development)
+- Reddit API credentials (client ID, secret)
+- Docker and Docker Compose installed
+- Python 3.9+ (for local testing/development)
 
 ## *Setup & Configuration*
 
 1. Clone the Repository
 
-. git clone https://github.com/your-username/reddit-data-pipeline.git
+- git clone https://github.com/your-username/reddit-data-pipeline.git
 cd reddit-data-pipeline
 
 2. Configure Environment
 
 Edit the config file to include your:
 
-. Reddit credentials
-. AWS keys
-. S3 bucket
-. Redshift cluster details
+- Reddit credentials
+- AWS keys
+- S3 bucket
+- Redshift cluster details
 
 3. Start the Environment
 
-. docker-compose up --build
+- docker-compose up --build
 
 4. Access Airflow UI
 
-. URL: http://localhost:8080
+- URL: http://localhost:8080
 
 ## * Pipeline Execution Flow*
  1. Extraction
-. Airflow DAG triggers reddit_pipeline
+- Airflow DAG triggers reddit_pipeline
 
-. Pulls top posts from a subreddit via Reddit API
+- Pulls top posts from a subreddit via Reddit API
 
-. Saves .csv file to /opt/airflow/data/output
+- Saves .csv file to /opt/airflow/data/output
 
-. Uploads to S3://<bucket>/raw/
+- Uploads to S3://<bucket>/raw/
 
  2. Transformation
-. AWS Glue crawler catalogs raw data
+- AWS Glue crawler catalogs raw data
 
-. Athena transforms JSON/CSV using SQL or Glue scripts
+- Athena transforms JSON/CSV using SQL or Glue scripts
 
-. Cleaned data is written back to S3://<bucket>/processed/
+- Cleaned data is written back to S3://<bucket>/processed/
 
  3. Loading
-. Airflow triggers Redshift loader
-. Loads transformed data into Redshift using COPY command or AWS Glue jobs
+- Airflow triggers Redshift loader
+- Loads transformed data into Redshift using COPY command or AWS Glue jobs
 
 4.  Monitoring
-. Airflow DAGs display logs, retries, and status
+- Airflow DAGs display logs, retries, and status
 
 ## *Conclusion* 
 This project simulates an end-to-end production-grade ETL pipeline, leveraging industry-standard tools for:
 
-. Automation (Airflow)
-. Scalability (Glue, S3, Redshift)
-. Modularity (Docker-based microservice architecture)
+- Automation (Airflow)
+- Scalability (Glue, S3, Redshift)
+- Modularity (Docker-based microservice architecture)
 
 
 
