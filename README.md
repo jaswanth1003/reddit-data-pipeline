@@ -58,7 +58,7 @@ Before setting up the pipeline, ensure you have:
 
 1. Clone the Repository
 
-- git clone https://github.com/your-username/reddit-data-pipeline.git
+- git clone https://github.com/jaswanth1003/reddit-data-pipeline.git
 cd reddit-data-pipeline
 
 2. Configure Environment
@@ -79,7 +79,7 @@ Edit the config file to include your:
 - URL: http://localhost:8080
 
 ## * Pipeline Execution Flow*
- 1. Extraction
+ 1. ### Extraction
 - Airflow DAG triggers reddit_pipeline
 
 - Pulls top posts from a subreddit via Reddit API
@@ -88,18 +88,18 @@ Edit the config file to include your:
 
 - Uploads to S3://<bucket>/raw/
 
- 2. Transformation
+ 2. ### Transformation
 - AWS Glue crawler catalogs raw data
 
 - Athena transforms JSON/CSV using SQL or Glue scripts
 
 - Cleaned data is written back to S3://<bucket>/processed/
 
- 3. Loading
+ 3. ### Loading
 - Airflow triggers Redshift loader
 - Loads transformed data into Redshift using COPY command or AWS Glue jobs
 
-4.  Monitoring
+4. ### Monitoring
 - Airflow DAGs display logs, retries, and status
 
 ## *Conclusion* 
