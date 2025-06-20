@@ -66,8 +66,11 @@ cd reddit-data-pipeline
   Edit the config file to include your:
 
     - Reddit credentials
+    
     - AWS keys
+    
     - S3 bucket
+    
     - Redshift cluster details
 
 3. Start the Environment
