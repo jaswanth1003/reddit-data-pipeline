@@ -14,7 +14,7 @@ ETL pipeline using Airflow to extract Reddit data, store in S3, transform with A
 ## **Project Overview**
 This project implements a modular and scalable ETL pipeline that extracts data from Reddit using its official API, stores raw data in Amazon S3, transforms the data using AWS Glue, and loads it into Amazon Redshift for analytical querying. The orchestration is managed using Apache Airflow, containerized via Docker Compose, making it reproducible and cloud-ready.
 
-  # Key Functionalities:
+### Key Functionalities
 
 - Extracts top posts from specified subreddits using Reddit API
 
